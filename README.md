@@ -23,6 +23,7 @@
 - `notes/XML External Entity.md` - XXE notes and sample payloads.
 - `notes/simple-php-webshell-htaccess.md` - `.htaccess` PHP execution notes and a sample webshell.
 - `notes/exiftool.md` - CTF-focused ExifTool cheat sheet with GPS and stego tricks.
+- `notes/pwntools.md` - pwntools CLI and Python quick notes.
 
 #### Common CTF Workflow
 1. `exiftool -a -u -g1 suspicious.jpg`
