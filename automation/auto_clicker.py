@@ -1,5 +1,6 @@
 import pyautogui
 from pynput import keyboard
+from pathlib import Path
 import time
 
 # Disable PyAutoGUI fail-safe
@@ -19,7 +20,7 @@ AFTER_ACTIONS = [
     #"esc",        # Press Escape key
 ]
 
-DICTIONARY_FILE = "dictionary.txt"
+DICTIONARY_FILE = Path(__file__).resolve().parent / "dictionary.txt"
 running = True
 tab_pressed = False
 
@@ -146,7 +147,7 @@ if __name__ == "__main__":
 
 '''
 
-### 2. Auto Clicker Tool (`auto_clicker.py`)
+### 2. Auto Clicker Tool (`automation/auto_clicker.py`)
 An advanced automation tool that can perform sequences of clicks and key presses.
 
 **Features:**
@@ -159,7 +160,7 @@ An advanced automation tool that can perform sequences of clicks and key presses
 **Usage:**
 ```bash
 source venv/bin/activate
-python3 auto_clicker.py
+python3 automation/auto_clicker.py
 ```
 
 **Configuration:**
@@ -198,7 +199,7 @@ pip install pyautogui pynput
 ```
 
 4. **Create dictionary file:**
-Create a `dictionary.txt` file with words you want to automate (one per line).
+Create an `automation/dictionary.txt` file with words you want to automate (one per line).
 
 ## Dependencies
 

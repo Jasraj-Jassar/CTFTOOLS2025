@@ -12,7 +12,7 @@ CCM_RUA_finder.py extracts SCCM software metering RecentlyUsedApplication logs f
 
 ### Usage
 ```
-CCM_RUA_Finder.py -i path\to\OBJECTS.DATA -o path\to\output.xls
+python3 forensics/wmi/CCM_RUA_Finder.py -i path\to\OBJECTS.DATA -o path\to\output.xls
 ```
 
 The output file will be TSV formatted. Excel will automatically parse TSV files with .xls extensions.
@@ -29,7 +29,7 @@ In theory, this script will detect FilterToConsumerBindings that are deleted and
 in unallocated WMI space, but I haven't had a chance to test yet.
 
 ### Usage
-```PyWMIPersistenceFinder.py <OBJECTS.DATA file>```
+```python3 forensics/wmi/PyWMIPersistenceFinder.py <OBJECTS.DATA file>```
 
 The output is text based in the following format for each binding:
 ```
@@ -45,4 +45,3 @@ David Pany - Mandiant (FireEye) - 2017
 Twitter: @DavidPany
 
 Please send him comments, bug reports, and questions to his official github repo
-

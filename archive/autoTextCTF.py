@@ -1,11 +1,12 @@
 import pyautogui
 from pynput import keyboard
+from pathlib import Path
 import time
 
 # Disable PyAutoGUI fail-safe to prevent corner detection issues
 pyautogui.FAILSAFE = False
 
-DICTIONARY_FILE = "dictionary.txt"
+DICTIONARY_FILE = Path(__file__).resolve().parents[1] / "automation" / "dictionary.txt"
 click_actions = []  # Stores {"pos": (x, y), "action": "text"}
 recording = True
 running = True
