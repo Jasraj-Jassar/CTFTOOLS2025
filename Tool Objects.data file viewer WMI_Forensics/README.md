@@ -1,4 +1,7 @@
 # WMI_Forensics
+
+This repo is a clone of the official repo made by David Pany (see credits sections at the end of the page)
+
 This repository contains scripts used to find evidence in WMI repositories, specifically OBJECTS.DATA files located at:
 
 - C:\WINDOWS\system32\wbem\Repository\OBJECTS.DATA
@@ -36,10 +39,10 @@ The output is text based in the following format for each binding:
         Filter: <filter name><filter listener details>
 ```
 
-# Contact
+# Credits to the Author
 David Pany - Mandiant (FireEye) - 2017
 
 Twitter: @DavidPany
 
-Please send  comments, bug reports, and questions to @DavidPany or push changes directly to GitHub
+Please send him comments, bug reports, and questions to his official github repo
 
