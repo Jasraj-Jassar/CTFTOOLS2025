@@ -22,6 +22,16 @@
 - `notes/tshark_play_usb_audio.md` - steps to extract USB audio from a PCAP.
 - `notes/XML External Entity.md` - XXE notes and sample payloads.
 - `notes/simple-php-webshell-htaccess.md` - `.htaccess` PHP execution notes and a sample webshell.
+- `notes/exiftool.md` - CTF-focused ExifTool cheat sheet with GPS and stego tricks.
+
+#### Common CTF Workflow
+1. `exiftool -a -u -g1 suspicious.jpg`
+2. `strings suspicious.jpg`
+3. `binwalk suspicious.jpg`
+4. `zsteg suspicious.png`
+
+ExifTool first, stego tools second.
+
 
 ### Archive
 - `archive/autoTextCTF.py` - older click/text automation that records actions then replays them.
