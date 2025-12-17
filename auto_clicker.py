@@ -142,3 +142,73 @@ if __name__ == "__main__":
     
     click_and_paste()
     print("Done!")
+
+
+'''
+
+### 2. Auto Clicker Tool (`auto_clicker.py`)
+An advanced automation tool that can perform sequences of clicks and key presses.
+
+**Features:**
+- Multiple click positions before and after text input
+- Keyboard key press support (enter, tab, esc, etc.)
+- Dictionary-based word automation
+- Safe stop with Tab+Q combination
+- Continuous loop through dictionary
+
+**Usage:**
+```bash
+source venv/bin/activate
+python3 auto_clicker.py
+```
+
+**Configuration:**
+Edit the `BEFORE_ACTIONS` and `AFTER_ACTIONS` lists in the script:
+```python
+BEFORE_ACTIONS = [
+    (742, 1498),  # Click position
+    "tab",        # Press Tab key
+    "enter",      # Press Enter key
+]
+
+AFTER_ACTIONS = [
+    (962, 1681),  # Click position
+    "enter",      # Press Enter key
+    "esc",        # Press Escape key
+]
+```
+
+## Setup
+
+1. **Clone the repository:**
+```bash
+git clone <repository-url>
+cd CTFTOOLS2025
+```
+
+2. **Create virtual environment:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+3. **Install dependencies:**
+```bash
+pip install pyautogui pynput
+```
+
+4. **Create dictionary file:**
+Create a `dictionary.txt` file with words you want to automate (one per line).
+
+## Dependencies
+
+- `pyautogui` - For mouse and keyboard automation
+- `pynput` - For keyboard event listening
+
+## Safety Features
+
+- **Tab+Q combination** to safely stop automation
+- **PyAutoGUI fail-safe disabled** (controlled by keyboard shortcuts)
+- **Real-time monitoring** of stop conditions
+
+'''

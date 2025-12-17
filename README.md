@@ -1,93 +1,22 @@
-# CTF Automation Tools
+# CTF Automation Tools and notes
 
-A collection of Python automation tools for CTF (Capture The Flag) challenges and general automation tasks.
 
-## Tools Included
+## Index
 
-### 1. Mouse Capture Tool (`mouse_capture.py`)
-A simple tool to capture mouse click coordinates on screen.
+- `auto_clicker.py` - automated click/type loop driven by `dictionary.txt`, with Tab+Q safe stop.
+- `mouse_capture.py` - captures mouse click coordinates for automation setup.
+- `bruteunzip.py` - brute-force 4-digit ZIP passwords against `flag.zip`.
+- `decrypng.py` - XOR-decrypts an encrypted PNG using the known header bytes.
+- `Coppersmith's_attack_RSA.py` - low-exponent RSA root attack using values in `message.txt`.
+- `Archive/autoTextCTF.py` - older click/text automation that records actions then replays them.
+- `dictionary.txt` - word list used by automation scripts.
+- `tshark_play_usb_audio.md` - steps to extract USB audio from a PCAP.
+- `XML External Entity.md` - XXE notes and sample payloads.
+- `simple-php-webshell-htaccess.md` - `.htaccess` PHP execution notes and a sample webshell.
+- `Tool Objects.data file viewer WMI_Forensics/README.md` - WMI forensics tools overview and usage.
+- `Tool Objects.data file viewer WMI_Forensics/CCM_RUA_Finder.py` - extracts CCM RecentlyUsedApps records from WMI `OBJECTS.DATA`.
+- `Tool Objects.data file viewer WMI_Forensics/PyWMIPersistenceFinder.py` - finds WMI FilterToConsumerBindings in `OBJECTS.DATA`.
 
-**Usage:**
-```bash
-source venv/bin/activate
-python3 mouse_capture.py
-```
-
-- Click anywhere on the screen to capture coordinates
-- Press Ctrl+C to exit
-
-### 2. Auto Clicker Tool (`auto_clicker.py`)
-An advanced automation tool that can perform sequences of clicks and key presses.
-
-**Features:**
-- Multiple click positions before and after text input
-- Keyboard key press support (enter, tab, esc, etc.)
-- Dictionary-based word automation
-- Safe stop with Tab+Q combination
-- Continuous loop through dictionary
-
-**Usage:**
-```bash
-source venv/bin/activate
-python3 auto_clicker.py
-```
-
-**Configuration:**
-Edit the `BEFORE_ACTIONS` and `AFTER_ACTIONS` lists in the script:
-```python
-BEFORE_ACTIONS = [
-    (742, 1498),  # Click position
-    "tab",        # Press Tab key
-    "enter",      # Press Enter key
-]
-
-AFTER_ACTIONS = [
-    (962, 1681),  # Click position
-    "enter",      # Press Enter key
-    "esc",        # Press Escape key
-]
-```
-
-## Setup
-
-1. **Clone the repository:**
-```bash
-git clone <repository-url>
-cd CTFTOOLS2025
-```
-
-2. **Create virtual environment:**
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-3. **Install dependencies:**
-```bash
-pip install pyautogui pynput
-```
-
-4. **Create dictionary file:**
-Create a `dictionary.txt` file with words you want to automate (one per line).
-
-## Dependencies
-
-- `pyautogui` - For mouse and keyboard automation
-- `pynput` - For keyboard event listening
-
-## Safety Features
-
-- **Tab+Q combination** to safely stop automation
-- **PyAutoGUI fail-safe disabled** (controlled by keyboard shortcuts)
-- **Real-time monitoring** of stop conditions
-
-## Use Cases
-
-- CTF challenge automation
-- Form filling automation
-- Login attempt automation
-- Search query automation
-- Any repetitive click/type tasks
 
 ## Warning
 

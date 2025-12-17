@@ -20,3 +20,19 @@ try:
         listener.join()
 except KeyboardInterrupt:
     print("\nExiting...")
+
+'''
+
+### 1. Mouse Capture Tool (`mouse_capture.py`)
+A simple tool to capture mouse click coordinates on screen.
+
+**Usage:**
+```bash
+source venv/bin/activate
+python3 mouse_capture.py
+```
+
+- Click anywhere on the screen to capture coordinates
+- Press Ctrl+C to exit
+
+'''
